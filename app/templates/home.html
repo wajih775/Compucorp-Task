@@ -1,0 +1,71 @@
+﻿<div class="home view">
+    <div class="container-fluid">
+        <header>
+            <h3></h3>
+        </header> 
+    </div>
+
+    <div class="widget">
+        <div class="wrap">
+            <h1>Weather in {{data.Name}}, {{data.Sys.country}}</h1>
+            <div class="widget-main">
+                <div class="widget-climate">
+                    <div class="widget-left">
+                        <div class="season">
+                            <div class="degree">
+                                <h4>Wind</h4>
+                                <h3>{{data.Wind.speed}} miles/second</h3>
+                            </div>
+                            <div class="date">
+                                <h6>Degree ( {{data.Wind.deg}} )</h6>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="season w3">
+                            <div class="degree">
+                                <h4>Sea Level	</h4>
+                                <h3>{{data.Main.sea_level}}</h3>
+                            </div>
+                            <div class="date">
+                                <h6>{{data.Dt | date:'dd.MMM.yyyy' }}</h6>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="season agile">
+                            <div class="degree">
+                                <h4>Pressure</h4>
+                                <h3>{{data.Main.pressure}} hpa</h3>
+                            </div>
+                            <div class="date">
+                                <h6>{{data.Dt | date:'dd.MMM.yyyy' }}</h6>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="season">
+                            <div class="degree">
+                                <h4>Humidity</h4>
+                                <h3>{{data.Main.humidity}} %</h3>
+                            </div>
+                            <div class="date">
+                                <h6>{{data.Dt | date:'dd.MMM.yyyy' }}</h6>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+
+                    </div>
+                    <div class="widget-right w3l">
+                        <p>{{data.Dt | date:'dd/MMM/yyyy' }}</p>
+                        <p>{{data.Dt | date:'h:mm a' }}</p>
+                        <h5>{{data.Weather[0].description}}</h5>
+                                <div id="map"></div>
+                        <h2><img src="{{data.Weather[0].icon}}">{{data.Main.temp}} °C</h2>
+                    </div>
+                    <div class="row-fluid">
+                        
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
